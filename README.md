@@ -1,5 +1,5 @@
-# Aurelia-todo-test-app
-Aurelia/ES6 todo test app
+# Recipe box
+Recipe box
 
 To run this first do:
 
