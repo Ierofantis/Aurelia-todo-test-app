@@ -1,23 +1,18 @@
-import {Todo} from './todo';
-
 export class App {
   constructor() {
-    this.heading = "Todos";
-    this.todos = [];
-    this.todoDescription = '';
+    this.message = "Recipes";
+    this.box = [];
+    this.potentialbox = ''
   }
 
-  addTodo() {
-    if (this.todoDescription) {
-      this.todos.push(new Todo(this.todoDescription));
-      this.todoDescription = '';
-    }
+  get addrecipe() {
+   if (this.potentialbox){
+    this.box.push(this.potentialbox)
+   }
+   this.potentialbox = ''
   }
-
-  removeTodo(todo) {
-    let index = this.todos.indexOf(todo);
-    if (index !== -1) {
-      this.todos.splice(index, 1);
+    del(value){
+    const index = this.box.indexOf(value);
+    this.box.splice(index,1)
     }
-  }
 }

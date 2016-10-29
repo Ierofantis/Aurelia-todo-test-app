@@ -1,17 +1,16 @@
-<template>
-  <h1>${heading}</h1>
 
-  <form submit.trigger="addTodo()">
-    <input type="text" value.bind="todoDescription">
-    <button type="submit">Add Todo</button>
-  </form>
+
+<template>
+  <h1>${message}</h1>
+  
+  <input value.bind="potentialbox" placeholder="Sugar,Salt etc">
+  <button click.trigger="addrecipe()">Add recipe</button>
+
 
   <ul>
-    <li repeat.for="todo of todos">      
-      <span>
-        ${todo.description}
-      </span>
-      <button click.trigger="removeTodo(todo)">Remove</button>
-    </li>    
+  <li repeat.for = "boxes of box ">
+  ${boxes}<button click.trigger="del()">delete</button>
   </ul>
+  Add new Recipe<input type = "checkbox" ref="recursive">
+  <app if.bind="recursive.checked"></app>
 </template>
